@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\2k2s\MP\labs\Lab3\Lab3\Lab3\main.cpp(34,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+D:\2k2s\MP\labs\Lab3\Lab3\Lab3\main.cpp(36,6): warning C4101: min: неиспользованная локальная переменная
+  Lab3.vcxproj -> D:\2k2s\MP\labs\Lab3\Lab3\x64\Debug\Lab3.exe
