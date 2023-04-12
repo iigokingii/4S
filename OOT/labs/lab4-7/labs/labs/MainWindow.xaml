@@ -1,0 +1,85 @@
+﻿<Window x:Class="labs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:labs"
+        xmlns:el="clr-namespace:WpfCustomControlLibrary1;assembly=WpfCustomControlLibrary1"
+        mc:Ignorable="d"
+        Title="MainWindow" x:Name="main" Height="450" Width="675" MouseEnter="Window_MouseEnter" Style="{DynamicResource Window}">
+    <Window.CommandBindings>
+        <CommandBinding Command="local:WindowCommands.Exit" Executed="Exit_Executed"/>
+    </Window.CommandBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"></RowDefinition>
+            <RowDefinition Height="39*"></RowDefinition>
+            <RowDefinition Height="395*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="32*"></ColumnDefinition>
+            <ColumnDefinition Width="111*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{DynamicResource menuSt}">
+            <MenuItem Header="{DynamicResource File}">
+                <MenuItem x:Name="Saver" Command="Save" Header="{DynamicResource Save}" Foreground="Black"></MenuItem>
+                <MenuItem x:Name="Deleter" Command="Delete" Header="{DynamicResource Delete}" Foreground="Black"></MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="LangMenu" Header="{DynamicResource m_Title}">
+                <MenuItem x:Name="ru" Header="{DynamicResource RU}" Click="ru_Click" Foreground="Black"></MenuItem>
+                <MenuItem x:Name="en" Header="{DynamicResource ENGL}" Click="en_Click" Foreground="Black"></MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="theme" Header="{DynamicResource theme}">
+                <MenuItem x:Name="light" Header="{DynamicResource light}" Click="light_Click" Foreground="Black"></MenuItem>
+                <MenuItem x:Name="dark" Header="{DynamicResource dark}" Click="dark_Click" Foreground="Black"></MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="CustomControlElement" Header="{DynamicResource CustomCL}">
+                <MenuItem x:Name="TextReverse" Header="{DynamicResource ReverseText}" Foreground="Black" Click="TextReverse_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="Routedev" Header="{DynamicResource Routed}" Foreground="Black">
+                <MenuItem Click="Routedev_Click" Header="Bubbling"></MenuItem>
+                <MenuItem Click="MenuItem_Click" Header="Tunneling"></MenuItem>
+                <MenuItem  Click="Routedev_Click" Header="Direct"></MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="Exit" Header="{DynamicResource Exit}" Command="local:WindowCommands.Exit"></MenuItem>
+
+
+        </Menu>
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <TextBlock HorizontalAlignment="Right" Margin="0 0 10 0" Text="{DynamicResource search}"></TextBlock>
+            <TextBox x:Name="Search" Margin="4 0 5 0" BorderBrush="Black" BorderThickness="1" KeyDown="TextBox_KeyDown" ></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" >
+            <Button Margin="15 15 0 2" Click="Button_Click" Content="{DynamicResource items}" Style="{StaticResource StyleForNavBut}"></Button>
+            <Button Margin="2 15 0 2"  Click="Button_Click_1" Content="{DynamicResource item_list}" Style="{StaticResource StyleForNavBut}"></Button>
+            <Button Margin="2 15 0 2"  Click="But1_Click" Content="{DynamicResource Add_item}" Style="{StaticResource StyleForNavBut}"></Button>
+            <Button Margin="2 15 0 2"  Click="Button_Click_2" Content="{DynamicResource change}" Style="{StaticResource StyleForNavBut}"></Button>
+        </StackPanel>
+        <ScrollViewer Grid.Row="2" Grid.Column="0" Margin="0,15,0,0" >
+            <StackPanel Orientation="Vertical">
+                <Label Content="{DynamicResource SortBy}"></Label>
+                <StackPanel>
+                    <Button x:Name="ByName" Click="SortByName" Style="{DynamicResource windStyle}" Content="{DynamicResource name}"></Button>
+                    <Button x:Name="ByRait" Click="SortByRait" Style="{DynamicResource windStyle}" Content="{DynamicResource rating}"></Button>
+                    <Button x:Name="ByCol" Click="SortByCol" Style="{DynamicResource windStyle}" Content="{DynamicResource color}"></Button>
+                    <Button x:Name="ByType" Click="SortByType" Style="{DynamicResource windStyle}" Content="{DynamicResource type}"></Button>
+                    <StackPanel>
+                        <TextBlock HorizontalAlignment="Right" Margin="0 0 10 0" Text="{DynamicResource category}"></TextBlock>
+                        <TextBox x:Name="ByTyp" Margin="4 0 5 0" BorderBrush="Black" BorderThickness="1" KeyDown="SearchByType" ></TextBox>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        <ListBox x:Name="ItemsList" ItemTemplate="{DynamicResource listTemplate}" 
+                 Grid.Row="2" Grid.Column="1" Style="{DynamicResource ListBack}" Margin="10 10 10 0"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 SelectionMode="Single" SelectionChanged="ItemsList_SelectionChanged">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel >
+                    </WrapPanel>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+    </Grid>
+</Window>

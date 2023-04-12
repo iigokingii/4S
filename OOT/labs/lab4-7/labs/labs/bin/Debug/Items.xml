@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<ArrayOfItems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Items>
+    <ID>ID: 0</ID>
+    <Name>груша</Name>
+    <Type>Фрукт</Type>
+    <Rating>Рейтинг: 4</Rating>
+    <Color>Цвет:желто-красный</Color>
+    <Number>Штук в наличии:102</Number>
+    <ImagePath>D:\2k2s\OOT\labs\lab4-7\labs\labs\images\gr.jpg</ImagePath>
+  </Items>
+  <Items>
+    <ID>ID: 1</ID>
+    <Name>яблоко</Name>
+    <Type>Фрукт</Type>
+    <Rating>Рейтинг: 6</Rating>
+    <Color>Цвет:красный</Color>
+    <Number>Штук в наличии:94</Number>
+    <ImagePath>D:\2k2s\OOT\labs\lab4-7\labs\labs\images\apple.jpg</ImagePath>
+  </Items>
+  <Items>
+    <ID>ID: 2</ID>
+    <Name>авокадо</Name>
+    <Type>Фрукт</Type>
+    <Rating>Рейтинг: 7</Rating>
+    <Color>Цвет:зеленый</Color>
+    <Number>Штук в наличии:12</Number>
+    <ImagePath>D:\2k2s\OOT\labs\lab4-7\labs\labs\images\avokado.jpg</ImagePath>
+  </Items>
+  <Items>
+    <ID>ID: 3</ID>
+    <Name>киви</Name>
+    <Type>Ягода</Type>
+    <Rating>Рейтинг: 8</Rating>
+    <Color>Цвет:коричневый</Color>
+    <Number>Штук в наличии:20</Number>
+    <ImagePath>D:\2k2s\OOT\labs\lab4-7\labs\labs\images\kiwi.jpg</ImagePath>
+  </Items>
+  <Items>
+    <ID>ID: 4</ID>
+    <Name>клубника</Name>
+    <Type>многоорешек</Type>
+    <Rating>Рейтинг: 3</Rating>
+    <Color>Цвет:красный</Color>
+    <Number>Штук в наличии:1000</Number>
+    <ImagePath>D:\2k2s\OOT\labs\lab4-7\labs\labs\images\klub.jpg</ImagePath>
+  </Items>
+  <Items>
+    <ID>ID: 5</ID>
+    <Name>Лимон</Name>
+    <Type>Ягода</Type>
+    <Rating>Рейтинг: 5.5</Rating>
+    <Color>Цвет:желтый</Color>
+    <Number>Штук в наличии:15</Number>
+    <ImagePath>D:\2k2s\OOT\labs\lab4-7\labs\labs\images\lemon.jpg</ImagePath>
+  </Items>
+  <Items>
+    <ID>ID: 6</ID>
+    <Name>Апельсин</Name>
+    <Type>Фрукт</Type>
+    <Rating>Рейтинг: 6.4</Rating>
+    <Color>Цвет:Оранжевый</Color>
+    <Number>Штук в наличии:40</Number>
+    <ImagePath>D:\2k2s\OOT\labs\lab4-7\labs\labs\images\orange.jpg</ImagePath>
+  </Items>
+  <Items>
+    <ID>ID: 7</ID>
+    <Name>Перец</Name>
+    <Type>Фрукт</Type>
+    <Rating>Рейтинг: 9</Rating>
+    <Color>Цвет:Красный</Color>
+    <Number>Штук в наличии:60</Number>
+    <ImagePath>D:\2k2s\OOT\labs\lab4-7\labs\labs\images\perec.jpg</ImagePath>
+  </Items>
+  <Items>
+    <ID>ID: 8</ID>
+    <Name>Персик</Name>
+    <Type>Фрукт</Type>
+    <Rating>Рейтинг: 10</Rating>
+    <Color>Цвет:Желто-оранжевый</Color>
+    <Number>Штук в наличии:3</Number>
+    <ImagePath>D:\2k2s\OOT\labs\lab4-7\labs\labs\images\persik.jpg</ImagePath>
+  </Items>
+  <Items>
+    <ID>ID: 9</ID>
+    <Name>Виноград</Name>
+    <Type>Ягода</Type>
+    <Rating>Рейтинг: 10</Rating>
+    <Color>Цвет:Зеленый</Color>
+    <Number>Штук в наличии:19</Number>
+    <ImagePath>D:\2k2s\OOT\labs\lab4-7\labs\labs\images\vinogr.jpg</ImagePath>
+  </Items>
+</ArrayOfItems>

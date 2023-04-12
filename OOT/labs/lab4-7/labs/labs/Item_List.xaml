@@ -1,0 +1,31 @@
+﻿<Window x:Class="labs.Item_List"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:labs"
+        mc:Ignorable="d"
+        Title="Item_List" Height="450" Width="900">
+    <Window.Resources>
+        
+    </Window.Resources>
+    <Grid>
+        <DataGrid ColumnWidth="*" x:Name="ItemsGrid" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn HeaderStyle="{DynamicResource ColStyle}" CellStyle="{DynamicResource DataGridStyle}" Header="{DynamicResource IDCol}" Binding="{Binding Path=ID}"></DataGridTextColumn>
+                <DataGridTextColumn HeaderStyle="{DynamicResource ColStyle}" CellStyle="{DynamicResource DataGridStyle}" Header="{DynamicResource nameCol}" Binding="{Binding Path=Name}"></DataGridTextColumn>
+                <DataGridTextColumn HeaderStyle="{DynamicResource ColStyle}" CellStyle="{DynamicResource DataGridStyle}" Header="{DynamicResource typeCol}" Binding="{Binding Path=Type}"></DataGridTextColumn>
+                <DataGridTextColumn HeaderStyle="{DynamicResource ColStyle}" CellStyle="{DynamicResource DataGridStyle}" Header="{DynamicResource RatingCol}" Binding="{Binding Path=Rating}"></DataGridTextColumn>
+                <DataGridTextColumn HeaderStyle="{DynamicResource ColStyle}" CellStyle="{DynamicResource DataGridStyle}" Header="{DynamicResource colorCol}" Binding="{Binding Path=Color}"></DataGridTextColumn>
+                <DataGridTextColumn HeaderStyle="{DynamicResource ColStyle}" CellStyle="{DynamicResource DataGridStyle}" Header="{DynamicResource numberCol}" Binding="{Binding Path=Number}"></DataGridTextColumn>
+                <DataGridTemplateColumn HeaderStyle="{DynamicResource ColStyle}" CellStyle="{DynamicResource DataGridStyle}" Header="{DynamicResource ImCol}">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Width="60" Height="70" Source="{Binding Path=ImagePath}"></Image>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

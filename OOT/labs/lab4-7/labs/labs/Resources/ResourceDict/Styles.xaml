@@ -1,0 +1,43 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:labs">
+    
+    <Style x:Key="TextBlock">
+        <Setter Property="Panel.Margin" Value="10"/>
+    </Style>
+    <Style x:Key="Butt">
+        <Setter Property="Control.FontFamily" Value="Verdana" />
+        <Setter Property="Control.Margin" Value="6 12 6 15"/>
+        <Setter Property="Control.MinWidth" Value="30"/>
+        <Setter Property="Control.MinHeight" Value="25"/>
+        <Setter Property="Control.Effect" >
+            <Setter.Value>
+                <DropShadowEffect Color="Gray" Opacity=".30" ShadowDepth="7" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="StyleForNavBut">
+        <Setter Property="Control.FontSize" Value="10"></Setter>
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Button.MouseEnter">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.300" Storyboard.TargetProperty="FontSize" To="12"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="Button.MouseLeave">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.300" Storyboard.TargetProperty="FontSize" To="10"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+    
+</ResourceDictionary>
