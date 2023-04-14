@@ -1,0 +1,140 @@
+﻿<Window x:Class="Lab91.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab91"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="StforSP">
+            <Setter Property="Panel.Margin" Value="6"/>
+            <Setter Property="Panel.VerticalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <DataGrid  ColumnWidth="*" x:Name="Libraries" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Path= Id}"/>
+                    <DataGridTextColumn Header="Adress" Binding="{Binding Path = Adress}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid  ColumnWidth="*" x:Name="Books" Grid.Column="1" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Path= Id}"/>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Path= Name}"/>
+                    <DataGridTextColumn Header="Author" Binding="{Binding Path= Author}"/>
+                    <DataGridTextColumn Header="LibraryID" Binding="{Binding Path= LibraryID}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="1.2*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60*"/>
+                    <ColumnDefinition Width="90*"/>
+                    <ColumnDefinition Width="90*"/>
+                    <ColumnDefinition Width="90*"/>
+                    <ColumnDefinition Width="60*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap">Введите ID библиотеки</TextBlock>
+                    <TextBox Margin="5 0 5 0" x:Name="LibraryID"></TextBox>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Center" Grid.Column="1" >
+                    <StackPanel Margin="6">
+                        <Button x:Name="default" Click="default_Click" Content="Добавление по умолчанию"></Button>
+                    </StackPanel>
+                    <StackPanel Margin="6">
+                        <Button x:Name="inputValues" Click="Add_Click" Content="Добавление"></Button>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Margin="6" VerticalAlignment="Center" Grid.Column="2">
+                    <Button x:Name="Editing" Click="Editing_Click">Редактирование</Button>
+                </StackPanel>
+                <StackPanel Margin="6" Grid.Column="3" VerticalAlignment="Center">
+                    <Button x:Name="Delete" Click="Delete_Click">Удалить</Button>
+                </StackPanel>
+                <StackPanel Margin="6" Grid.Column="4" VerticalAlignment="Center">
+                    <TextBlock>Введите ID книги:</TextBlock>
+                    <TextBox x:Name="BookID"></TextBox>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Style="{StaticResource StforSP}" >
+                    <Button x:Name="SortBylibID" Click="SortBylibID_Click">Sort by libID</Button>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Style="{StaticResource StforSP}" >
+                    <Button x:Name="SortByAdress" Click="SortByAdress_Click">Sort by libAddr</Button>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Style="{StaticResource StforSP}" >
+                    <Button x:Name="SortByBookID" Click="SortByBookID_Click">Sort by book ID</Button>
+                </StackPanel>
+                <StackPanel Grid.Column="3" Style="{StaticResource StforSP}" >
+                    <Button x:Name="SortByBookName" Click="SortByBookName_Click">Sort by book name</Button>
+                </StackPanel>
+                <StackPanel Grid.Column="4" Style="{StaticResource StforSP}" >
+                    <Button x:Name="SortByAuthor" Click="SortByAuthor_Click">Sort by author</Button>
+                </StackPanel>
+                <StackPanel Grid.Column="5" Style="{StaticResource StforSP}" >
+                    <Button x:Name="SortByLibIDInBook" Click="SortByLibIDInBook_Click">Sort by lib id in books</Button>
+                </StackPanel>
+                <StackPanel Grid.Column="6" Style="{StaticResource StforSP}">
+                    <Button x:Name="ToDef" Click="ToDef_Click">To default</Button>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="147*"/>
+                    <ColumnDefinition Width="195*"/>
+                    <ColumnDefinition Width="458*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="6" Orientation="Vertical">
+                    <StackPanel>
+                        <TextBlock>Book Name:</TextBlock>
+                        <TextBox x:Name="SearchBookName"></TextBox>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock>Library ID in books:</TextBlock>
+                        <TextBox x:Name="SearchLibId"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="20" Style="{StaticResource StforSP}">
+                    <Button x:Name="Search" FontSize="15" Click="Search_Click">Поиск:</Button>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <TextBlock FontSize="14">Результат поиска:</TextBlock>
+                    <TextBlock TextWrapping="Wrap" x:Name="Res"></TextBlock>
+                </StackPanel>
+
+
+
+
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
