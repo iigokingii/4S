@@ -1,0 +1,6 @@
+﻿  ClientS.cpp
+D:\2k2s\PSP\labs\Lab5\Lab5\Lab5\ClientS.cpp(7,1): warning C4005: INADDR_ANY: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\ws2def.h(600): message : см. предыдущее определение "INADDR_ANY"
+D:\2k2s\PSP\labs\Lab5\Lab5\Lab5\ClientS.cpp(9,1): warning C4005: INADDR_BROADCAST: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\ws2def.h(602): message : см. предыдущее определение "INADDR_BROADCAST"
+  Lab5.vcxproj -> D:\2k2s\PSP\labs\Lab5\Lab5\x64\Debug\Lab5.exe

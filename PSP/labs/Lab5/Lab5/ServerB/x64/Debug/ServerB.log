@@ -1,0 +1,9 @@
+﻿  ServerB.cpp
+D:\2k2s\PSP\labs\Lab5\Lab5\ServerB\ServerB.cpp(10,1): warning C4005: INADDR_ANY: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\ws2def.h(600): message : см. предыдущее определение "INADDR_ANY"
+D:\2k2s\PSP\labs\Lab5\Lab5\ServerB\ServerB.cpp(12,1): warning C4005: INADDR_BROADCAST: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\ws2def.h(602): message : см. предыдущее определение "INADDR_BROADCAST"
+D:\2k2s\PSP\labs\Lab5\Lab5\ServerB\ServerB.cpp(145,5): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\2k2s\PSP\labs\Lab5\Lab5\ServerB\ServerB.cpp(171,6): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\2k2s\PSP\labs\Lab5\Lab5\ServerB\ServerB.cpp(147): warning C4715: PutAnswerToClient: значение возвращается не при всех путях выполнения
+  ServerB.vcxproj -> D:\2k2s\PSP\labs\Lab5\Lab5\x64\Debug\ServerB.exe
