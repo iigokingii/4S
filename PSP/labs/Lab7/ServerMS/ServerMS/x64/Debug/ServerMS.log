@@ -1,0 +1,6 @@
+﻿  ServerMs.cpp
+D:\2k2s\PSP\labs\Lab7\ServerMS\ServerMS\ServerMs.cpp(10,1): warning C4005: INADDR_ANY: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\ws2def.h(600): message : см. предыдущее определение "INADDR_ANY"
+D:\2k2s\PSP\labs\Lab7\ServerMS\ServerMS\ServerMs.cpp(12,1): warning C4005: INADDR_BROADCAST: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\ws2def.h(602): message : см. предыдущее определение "INADDR_BROADCAST"
+  ServerMS.vcxproj -> D:\2k2s\PSP\labs\Lab7\ServerMS\x64\Debug\ServerMS.exe
