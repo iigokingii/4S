@@ -1,0 +1,33 @@
+#FooterIm{
+    margin: 10px;
+}
+.FooterImages{
+    margin-left: auto;
+    margin-right: auto;
+    width:230px;
+}
+.Wrapper{
+    width: 100%;
+}
+.Footer{
+    display: flex;
+    margin-top: 120px;
+    flex-direction: column;
+}
+#Footerlogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:8%;
+}
+.FooterText{
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    /* identical to box height, or 158% */
+    text-align: center;
+    letter-spacing: 0.38px;
+    color: #333333;
+}

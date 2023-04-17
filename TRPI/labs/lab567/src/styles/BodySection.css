@@ -1,0 +1,25 @@
+.Bodyst{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.MedItems{
+    display: flex;
+    justify-content: space-between;
+}
+.LittItems{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.List-item {
+    display: inline-block;
+    margin-right: 10px;
+    }
+    .List-enter-active, .List-leave-active {
+    transition: all 2s;
+    }
+    .List-enter-from, .List-leave-to  {
+    opacity: 0;
+    transform: translateY(30px);
+    }
