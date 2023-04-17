@@ -1,0 +1,7 @@
+﻿  ServerT.cpp
+D:\2k2s\PSP\labs\Lab2\ServerT\ServerT\ServerT.cpp(10,1): warning C4005: INADDR_ANY: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\ws2def.h(600): message : см. предыдущее определение "INADDR_ANY"
+D:\2k2s\PSP\labs\Lab2\ServerT\ServerT\ServerT.cpp(12,1): warning C4005: INADDR_BROADCAST: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\ws2def.h(602): message : см. предыдущее определение "INADDR_BROADCAST"
+D:\2k2s\PSP\labs\Lab2\ServerT\ServerT\ServerT.cpp(149,7): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  ServerT.vcxproj -> D:\2k2s\PSP\labs\Lab2\ServerT\x64\Debug\ServerT.exe
