@@ -3518,11 +3518,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\2k2s\\OOT\\labs\\lab9\\Lab91\\Lab91\\Lab91.csproj",
+      "projectUniqueName": "D:\\2k2s\\OOT\\labs\\lab9-10\\Lab91\\Lab91\\Lab91.csproj",
       "projectName": "Lab91",
-      "projectPath": "D:\\2k2s\\OOT\\labs\\lab9\\Lab91\\Lab91\\Lab91.csproj",
+      "projectPath": "D:\\2k2s\\OOT\\labs\\lab9-10\\Lab91\\Lab91\\Lab91.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\2k2s\\OOT\\labs\\lab9\\Lab91\\Lab91\\obj\\",
+      "outputPath": "D:\\2k2s\\OOT\\labs\\lab9-10\\Lab91\\Lab91\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

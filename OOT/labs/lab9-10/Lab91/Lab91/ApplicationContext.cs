@@ -16,5 +16,10 @@ namespace Lab91
             string connectionString = "Server=GOKING;Database=lab9OOTEntity;Trusted_Connection=True;TrustServerCertificate=True;";
             builder.UseSqlServer(connectionString);
         }
+       /* public ApplicationContext()
+        {
+            Database.EnsureDeleted();
+            Database.EnsureCreated();
+        }*/
     }
 }
