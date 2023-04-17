@@ -13,9 +13,6 @@
             <RowDefinition Height="99*"/>
 
         </Grid.RowDefinitions>
-        <DataGrid x:Name="Items" AutoGenerateColumns="True">
-
-        </DataGrid>
         <Grid Grid.Row="2" x:Name="AddingMenu">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -157,7 +154,7 @@
         </Menu>
         <DataGrid ScrollViewer.CanContentScroll="True" 
                   ScrollViewer.HorizontalScrollBarVisibility="Visible"
-                  Grid.Row="1" x:Name="ItemsGrid" AutoGenerateColumns="False">
+                  Grid.Row="1" x:Name="ItemsGrid" AutoGenerateColumns="False"  ColumnWidth="*">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Path=FLAT_ID}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Square" Binding="{Binding Path=SQUARE_FOOTAGE}"></DataGridTextColumn>
@@ -181,7 +178,6 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Image Width="50" Height="60" Source="{Binding Path=FLAT_IMAGE}"/>
-                            <!--Source="{Binding Path=ImagePath}"-->
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

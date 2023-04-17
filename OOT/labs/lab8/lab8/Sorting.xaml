@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         <DataGrid ScrollViewer.CanContentScroll="True" 
                   ScrollViewer.HorizontalScrollBarVisibility="Visible"
-                  x:Name="ItemsGrid" AutoGenerateColumns="False">
+                  x:Name="ItemsGrid" AutoGenerateColumns="False"  ColumnWidth="*">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Path=FLAT_ID}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Square" Binding="{Binding Path=SQUARE_FOOTAGE}"></DataGridTextColumn>

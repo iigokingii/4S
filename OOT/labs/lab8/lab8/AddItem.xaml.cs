@@ -382,7 +382,8 @@ namespace lab8
         private int CheckValid()
         {
             int id,floor;
-            string pattern = "([a-z])+|([а-я])+|([A-Z])+|([А-Я])+";
+            //string pattern = "([a-z])+|([а-я])+|([A-Z])+|([А-Я])+";
+            string pattern = "^[а-яА-Я ]*$";
             if (!int.TryParse(ID.Text, out id))
             {
                 ID.Background = new SolidColorBrush(Colors.Red);
@@ -547,7 +548,7 @@ namespace lab8
         {
             if (CheckValid() == 1)
             {
-                //int id = int.Parse(ID.Text);
+                int id = int.Parse(ID.Text);
                 using (SqlConnection con = new SqlConnection(sqlConnection.ConnectionString))
                 {
                     con.Open();
