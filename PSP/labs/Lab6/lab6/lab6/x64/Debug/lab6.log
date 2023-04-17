@@ -1,0 +1,9 @@
+﻿  ServerNP.cpp
+D:\2k2s\PSP\labs\Lab6\lab6\lab6\ServerNP.cpp(10,1): warning C4005: INADDR_ANY: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\ws2def.h(600): message : см. предыдущее определение "INADDR_ANY"
+D:\2k2s\PSP\labs\Lab6\lab6\lab6\ServerNP.cpp(12,1): warning C4005: INADDR_BROADCAST: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\ws2def.h(602): message : см. предыдущее определение "INADDR_BROADCAST"
+D:\2k2s\PSP\labs\Lab6\lab6\lab6\ServerNP.cpp(107,7): warning C4312: приведение типов: преобразование из "int" в "LPDWORD" большего размера
+D:\2k2s\PSP\labs\Lab6\lab6\lab6\ServerNP.cpp(115,7): warning C4312: приведение типов: преобразование из "int" в "LPDWORD" большего размера
+D:\2k2s\PSP\labs\Lab6\lab6\lab6\ServerNP.cpp(115,7): warning C4267: аргумент: преобразование из "size_t" в "DWORD"; возможна потеря данных
+  lab6.vcxproj -> D:\2k2s\PSP\labs\Lab6\lab6\x64\Debug\ServerNP.exe
