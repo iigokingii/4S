@@ -53,7 +53,7 @@
     </Style>
     <Style x:Key="TBStyle">
         <Setter Property="Control.Margin" Value="20 0 20 20"></Setter>
-        <Setter Property="Control.Background" Value="Red"></Setter>
+        <Setter Property="Control.Background" Value="Beige"></Setter>
     </Style>
     <Style x:Key="ItemTB">
    

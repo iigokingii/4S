@@ -99,7 +99,7 @@ namespace labs
         }
         private void CommandBind_Delete(object sender, ExecutedRoutedEventArgs e)
         {
-            FileInfo fi = new FileInfo("D:\\2k2s\\OOT\\labs\\wpfLabs\\labs\\labs\\bin\\Debug\\Saver.xml");
+            FileInfo fi = new FileInfo("D:\\2k2s\\OOT\\labs\\lab4-7\\labs\\labs\\bin\\Debug\\Saver.xml");
             fi.Delete();
             MessageBox.Show("data has been deleted by Deleter", "Deleter", MessageBoxButton.OKCancel, MessageBoxImage.Information, MessageBoxResult.OK);
         }

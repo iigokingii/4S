@@ -41,6 +41,16 @@ namespace labs
             bool? change = DataTrigger.IsChecked;
             if (delete.HasValue && delete.Value)
             {
+                int i;
+                if (!int.TryParse(textId.Text,out i))
+                {
+                    textId.Background = new SolidColorBrush(Colors.Red);
+                    return;
+                }
+                else
+                {
+                    textId.Background = new SolidColorBrush(Colors.White);
+                }
                 bool find=false;
                 int t = int.Parse(textId.Text);
                 foreach(var ts in items)
@@ -53,14 +63,30 @@ namespace labs
                         break;
                     }
                 }
-                if (!find)
-                {
-
-                }
-                
             }
             else if(change.HasValue && change.Value)
             {
+                int p1;
+                double p2;
+                if (!int.TryParse(Number.Text, out p1))
+                {
+                    Number.Background = new SolidColorBrush(Colors.Red);
+                    return;
+                }
+                else
+                {
+                    Number.Background = new SolidColorBrush(Colors.White);
+                }
+
+                if (!double.TryParse(Rating.Text, out p2))
+                {
+                    Rating.Background = new SolidColorBrush(Colors.Red);
+                    return;
+                }
+                else
+                {
+                    Rating.Background = new SolidColorBrush(Colors.White);
+                }
                 bool find = false;
                 int t = int.Parse(textId.Text);
                 foreach (var ts in items)
@@ -77,7 +103,6 @@ namespace labs
                         item.Name = ts.Name;
                         item.ImagePath = ts.ImagePath;
                         UndoWatcher.Push(item);
-
 
                         int tempIndex = items.IndexOf(ts);
                         items.Remove(ts);

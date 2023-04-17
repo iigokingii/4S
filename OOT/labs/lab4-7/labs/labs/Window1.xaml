@@ -106,22 +106,9 @@
                     </Grid.ColumnDefinitions>
                     <Button x:Name="Undo" Grid.Column="0" Margin="4" Click="Undo_Click">Undo</Button>
                     <Button x:Name="Redo" Grid.Column="1" Margin="4" Click="Redo_Click">Redo</Button>
-                    
                 </Grid>
             </StackPanel>
-
-
-
-
         </Grid>
-
-
-
-
-
-
-
-
         <ListBox x:Name="ItemsLit" ItemTemplate="{StaticResource listTemplat}" 
                  Grid.Row="1" Grid.Column="1" Style="{DynamicResource ListBack}" Margin="10 10 10 0"
                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
