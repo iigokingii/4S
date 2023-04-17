@@ -1,0 +1,295 @@
+
+Активные подключения
+
+  Имя    Локальный адрес        Внешний адрес          Состояние
+  TCP    0.0.0.0:135            GoKing:0               LISTENING
+  RpcSs
+ [svchost.exe]
+  TCP    0.0.0.0:445            GoKing:0               LISTENING
+ Не удается получить сведения о владельце
+  TCP    0.0.0.0:2343           GoKing:0               LISTENING
+ [lkads.exe]
+  TCP    0.0.0.0:3580           GoKing:0               LISTENING
+ [nisvcloc.exe]
+  TCP    0.0.0.0:3582           GoKing:0               LISTENING
+ [SystemWebServer.exe]
+  TCP    0.0.0.0:5040           GoKing:0               LISTENING
+  CDPSvc
+ [svchost.exe]
+  TCP    0.0.0.0:7680           GoKing:0               LISTENING
+ Не удается получить сведения о владельце
+  TCP    0.0.0.0:8080           GoKing:0               LISTENING
+ [ApplicationWebServer.exe]
+  TCP    0.0.0.0:8733           GoKing:0               LISTENING
+ Не удается получить сведения о владельце
+  TCP    0.0.0.0:49664          GoKing:0               LISTENING
+ [lsass.exe]
+  TCP    0.0.0.0:49665          GoKing:0               LISTENING
+ Не удается получить сведения о владельце
+  TCP    0.0.0.0:49666          GoKing:0               LISTENING
+  EventLog
+ [svchost.exe]
+  TCP    0.0.0.0:49667          GoKing:0               LISTENING
+  Schedule
+ [svchost.exe]
+  TCP    0.0.0.0:49668          GoKing:0               LISTENING
+ [spoolsv.exe]
+  TCP    0.0.0.0:49694          GoKing:0               LISTENING
+ Не удается получить сведения о владельце
+  TCP    0.0.0.0:59110          GoKing:0               LISTENING
+ [nidmsrv.exe]
+  TCP    0.0.0.0:59111          GoKing:0               LISTENING
+ [lktsrv.exe]
+  TCP    127.0.0.1:1434         GoKing:0               LISTENING
+ [sqlservr.exe]
+  TCP    127.0.0.1:49670        GoKing:0               LISTENING
+ [nimdnsResponder.exe]
+  TCP    127.0.0.1:49670        GoKing:49683           ESTABLISHED
+ [nimdnsResponder.exe]
+  TCP    127.0.0.1:49673        GoKing:49674           ESTABLISHED
+ [lkcitdl.exe]
+  TCP    127.0.0.1:49674        GoKing:49673           ESTABLISHED
+ [lkcitdl.exe]
+  TCP    127.0.0.1:49675        GoKing:49676           ESTABLISHED
+ [nidmsrv.exe]
+  TCP    127.0.0.1:49676        GoKing:49675           ESTABLISHED
+ [nidmsrv.exe]
+  TCP    127.0.0.1:49677        GoKing:49678           ESTABLISHED
+ [lkads.exe]
+  TCP    127.0.0.1:49678        GoKing:49677           ESTABLISHED
+ [lkads.exe]
+  TCP    127.0.0.1:49679        GoKing:49680           ESTABLISHED
+ [lktsrv.exe]
+  TCP    127.0.0.1:49680        GoKing:49679           ESTABLISHED
+ [lktsrv.exe]
+  TCP    127.0.0.1:49683        GoKing:49670           ESTABLISHED
+ [lkads.exe]
+  TCP    127.0.0.1:50142        GoKing:0               LISTENING
+ [SocketHeciServer.exe]
+  TCP    192.168.31.200:139     GoKing:0               LISTENING
+ Не удается получить сведения о владельце
+  TCP    192.168.31.200:62929   um23:http              CLOSE_WAIT
+ Не удается получить сведения о владельце
+  TCP    192.168.31.200:62932   h3-epnsbroker02:8883   ESTABLISHED
+ Не удается получить сведения о владельце
+  TCP    192.168.31.200:62941   20.199.120.182:https   ESTABLISHED
+  WpnService
+ [svchost.exe]
+  TCP    192.168.31.200:62946   wr-in-f188:5228        ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:62986   93.186.225.198:https   ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63000   srv186-129-240-87:https  ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63030   a104-126-37-139:https  LAST_ACK
+ [SearchApp.exe]
+  TCP    192.168.31.200:63032   a95-101-23-73:https    LAST_ACK
+ [SearchApp.exe]
+  TCP    192.168.31.200:63036   52.97.135.98:https     ESTABLISHED
+ [SearchApp.exe]
+  TCP    192.168.31.200:63044   srv164-137-240-87:https  ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63054   a23-32-238-11:https    LAST_ACK
+ [SearchApp.exe]
+  TCP    192.168.31.200:63058   152.199.19.161:https   LAST_ACK
+ [SearchApp.exe]
+  TCP    192.168.31.200:63059   93.184.220.29:http     LAST_ACK
+ [SearchApp.exe]
+  TCP    192.168.31.200:63062   20.54.24.231:https     ESTABLISHED
+ Не удается получить сведения о владельце
+  TCP    192.168.31.200:63064   194.226.130.229:https  ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63065   srv145-227:https       ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63066   srv163-185-240-87:https  ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63067   87.240.169.0:https     ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63068   srv128-185-240-87:https  ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63069   srv128-227:https       ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63070   srv149-227:https       ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63071   srv135-185-240-87:https  ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63072   srv139-185-240-87:https  ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63073   srv153-227:https       ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63074   srv152-227:https       ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63075   srv131-185-240-87:https  ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63076   srv141-227:https       ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63077   srv135-227:https       ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63078   srv158-185-240-87:https  ESTABLISHED
+ [chrome.exe]
+  TCP    192.168.31.200:63079   srv128-185-240-87:https  TIME_WAIT
+  TCP    192.168.31.200:63085   52.109.28.107:https    TIME_WAIT
+  TCP    192.168.31.200:63087   a23-37-41-57:http      ESTABLISHED
+  CryptSvc
+ [svchost.exe]
+  TCP    192.168.31.200:63088   a23-37-41-57:http      ESTABLISHED
+  CryptSvc
+ [svchost.exe]
+  TCP    192.168.31.200:63089   fra24s12-in-f14:http   ESTABLISHED
+  CryptSvc
+ [svchost.exe]
+  TCP    192.168.31.200:63090   152.199.21.118:https   ESTABLISHED
+ [SearchApp.exe]
+  TCP    192.168.31.200:63091   a104-126-37-139:https  ESTABLISHED
+ [SearchApp.exe]
+  TCP    192.168.31.200:63092   40.99.150.82:https     ESTABLISHED
+ [SearchApp.exe]
+  TCP    192.168.31.200:63093   204.79.197.222:https   ESTABLISHED
+ [SearchApp.exe]
+  TCP    192.168.31.200:63095   13.107.136.254:https   ESTABLISHED
+ [SearchApp.exe]
+  TCP    192.168.31.200:63096   13.107.6.254:https     ESTABLISHED
+ [SearchApp.exe]
+  TCP    192.168.56.1:139       GoKing:0               LISTENING
+ Не удается получить сведения о владельце
+  TCP    [::]:135               GoKing:0               LISTENING
+  RpcSs
+ [svchost.exe]
+  TCP    [::]:445               GoKing:0               LISTENING
+ Не удается получить сведения о владельце
+  TCP    [::]:7680              GoKing:0               LISTENING
+ Не удается получить сведения о владельце
+  TCP    [::]:8733              GoKing:0               LISTENING
+ Не удается получить сведения о владельце
+  TCP    [::]:49664             GoKing:0               LISTENING
+ [lsass.exe]
+  TCP    [::]:49665             GoKing:0               LISTENING
+ Не удается получить сведения о владельце
+  TCP    [::]:49666             GoKing:0               LISTENING
+  EventLog
+ [svchost.exe]
+  TCP    [::]:49667             GoKing:0               LISTENING
+  Schedule
+ [svchost.exe]
+  TCP    [::]:49668             GoKing:0               LISTENING
+ [spoolsv.exe]
+  TCP    [::]:49694             GoKing:0               LISTENING
+ Не удается получить сведения о владельце
+  TCP    [::1]:1434             GoKing:0               LISTENING
+ [sqlservr.exe]
+  TCP    [::1]:49669            GoKing:0               LISTENING
+ [jhi_service.exe]
+  UDP    0.0.0.0:500            *:*                    
+  IKEEXT
+ [svchost.exe]
+  UDP    0.0.0.0:2343           *:*                    
+ [lkads.exe]
+  UDP    0.0.0.0:4500           *:*                    
+  IKEEXT
+ [svchost.exe]
+  UDP    0.0.0.0:5000           *:*                    
+ [lkcitdl.exe]
+  UDP    0.0.0.0:5001           *:*                    
+ [nidmsrv.exe]
+  UDP    0.0.0.0:5002           *:*                    
+ [lktsrv.exe]
+  UDP    0.0.0.0:5050           *:*                    
+  CDPSvc
+ [svchost.exe]
+  UDP    0.0.0.0:5353           *:*                    
+  Dnscache
+ [svchost.exe]
+  UDP    0.0.0.0:5353           *:*                    
+ [chrome.exe]
+  UDP    0.0.0.0:5353           *:*                    
+ [chrome.exe]
+  UDP    0.0.0.0:5353           *:*                    
+ [chrome.exe]
+  UDP    0.0.0.0:5353           *:*                    
+ [chrome.exe]
+  UDP    0.0.0.0:5355           *:*                    
+  Dnscache
+ [svchost.exe]
+  UDP    0.0.0.0:6000           *:*                    
+ [lkcitdl.exe]
+  UDP    0.0.0.0:6001           *:*                    
+ [nidmsrv.exe]
+  UDP    0.0.0.0:6002           *:*                    
+ [lktsrv.exe]
+  UDP    0.0.0.0:53477          *:*                    
+ [nimdnsResponder.exe]
+  UDP    0.0.0.0:56504          *:*                    
+ [chrome.exe]
+  UDP    0.0.0.0:59715          *:*                    
+ [chrome.exe]
+  UDP    127.0.0.1:1900         *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    127.0.0.1:51838        *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    127.0.0.1:53476        *:*                    
+  iphlpsvc
+ [svchost.exe]
+  UDP    192.168.31.200:137     *:*                    
+ Не удается получить сведения о владельце
+  UDP    192.168.31.200:138     *:*                    
+ Не удается получить сведения о владельце
+  UDP    192.168.31.200:1900    *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    192.168.31.200:5353    *:*                    
+ [nimdnsResponder.exe]
+  UDP    192.168.31.200:51837   *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    192.168.56.1:137       *:*                    
+ Не удается получить сведения о владельце
+  UDP    192.168.56.1:138       *:*                    
+ Не удается получить сведения о владельце
+  UDP    192.168.56.1:1900      *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    192.168.56.1:5353      *:*                    
+ [nimdnsResponder.exe]
+  UDP    192.168.56.1:51836     *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    [::]:500               *:*                    
+  IKEEXT
+ [svchost.exe]
+  UDP    [::]:4500              *:*                    
+  IKEEXT
+ [svchost.exe]
+  UDP    [::]:5353              *:*                    
+ [chrome.exe]
+  UDP    [::]:5353              *:*                    
+  Dnscache
+ [svchost.exe]
+  UDP    [::]:5353              *:*                    
+ [chrome.exe]
+  UDP    [::]:5355              *:*                    
+  Dnscache
+ [svchost.exe]
+  UDP    [::]:53478             *:*                    
+ [nimdnsResponder.exe]
+  UDP    [::1]:1900             *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    [::1]:5353             *:*                    
+ [nimdnsResponder.exe]
+  UDP    [::1]:51835            *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    [fe80::5d47:5202:a482:f40f%4]:1900  *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    [fe80::5d47:5202:a482:f40f%4]:51833  *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    [fe80::fbb9:e124:8757:2217%3]:1900  *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    [fe80::fbb9:e124:8757:2217%3]:51834  *:*                    
+  SSDPSRV
+ [svchost.exe]
