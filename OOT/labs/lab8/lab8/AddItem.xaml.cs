@@ -383,7 +383,7 @@ namespace lab8
         {
             int id,floor;
             //string pattern = "([a-z])+|([а-я])+|([A-Z])+|([А-Я])+";
-            string pattern = "^[а-яА-Я ]*$";
+            string pattern = "^[a-zA-Zа-яА-Я ]*$";
             if (!int.TryParse(ID.Text, out id))
             {
                 ID.Background = new SolidColorBrush(Colors.Red);
