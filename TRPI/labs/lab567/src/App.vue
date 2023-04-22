@@ -36,8 +36,7 @@ export default{
         {id:2,imgS:"IMAGE6.png",Title:"Abris intuitifs",Description:"EXPOSITION SOLO"},
         {id:3,imgS:"IMAGE7.png",Title:"Correspondances 2",Description:"EXPOSITION COLLECTIVE"},
       ],
-      Title:"",
-      Description:"",
+
       footerBlackRect:"Rect.png",
       footerText:"© sainte marie textile 2020",
       footerImage:"footer.png"
