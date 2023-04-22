@@ -27,13 +27,18 @@ namespace Lab91
     public partial class MainWindow : Window
     {
         UnitOfWork unit;
-        StreamWriter sw = new StreamWriter("config.txt", false);
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = this;
-            unit = new UnitOfWork();
-            Update();
+            using (StreamWriter sw = new StreamWriter("config.txt", false)){
+                sw.WriteLine("Строка подключения :Server=GOKING;Database=lab9OOTEntity;Trusted_Connection=True;TrustServerCertificate=True;");
+                this.DataContext = this;
+                unit = new UnitOfWork();
+                sw.WriteLine("Создан объект паттерна unit of work");
+                Update();
+                sw.WriteLine("Данные занесены в DataGrid");
+            }
+           
         }
         private void Update()
         {
@@ -54,6 +59,10 @@ namespace Lab91
                 unit.Books.Save();
                 unit.Libs.Save();
                 unit.Save();
+                using (StreamWriter sw = new StreamWriter("config.txt", true))
+                {
+                    sw.WriteLine("Добавлены новые данные");
+                }
             }
             catch(Exception ex)
             {
@@ -68,7 +77,12 @@ namespace Lab91
         {
             Add add = new Add();
             bool ?close =add.ShowDialog();
-            if(close.HasValue && close.Value)
+            using (StreamWriter sw = new StreamWriter("config.txt", true))
+            {
+                sw.WriteLine("Вызвано окно для добавления ");
+            }
+
+            if (close.HasValue && close.Value)
             {
                 Update();
             }
@@ -162,13 +176,24 @@ namespace Lab91
                 LibraryID.Background = new SolidColorBrush(Colors.Red);
                 BookID.Background = new SolidColorBrush(Colors.Red );
             }
+
+
+            using (StreamWriter sw = new StreamWriter("config.txt", true))
+            {
+                sw.WriteLine("Данные удалены");
+            }
         }
 
         private void Editing_Click(object sender, RoutedEventArgs e)
         {
             Editing edit = new Editing();
             bool?response=edit.ShowDialog();
-            if(response.HasValue && response.Value)
+
+            using (StreamWriter sw = new StreamWriter("config.txt", true))
+            {
+                sw.WriteLine("Вызвано окно изменения");
+            }
+            if (response.HasValue && response.Value)
             {
                 Update();
             }
@@ -181,6 +206,11 @@ namespace Lab91
                 var tempdb = unit.Libs.GetItems().OrderByDescending(t => t.Id).ToList();
                 Libraries.ItemsSource = tempdb;
             }
+            using (StreamWriter sw = new StreamWriter("config.txt", true))
+            {
+                sw.WriteLine("Выполнена сортировка");
+            }
+            
         }
 
         private void SortByAdress_Click(object sender, RoutedEventArgs e)
@@ -190,6 +220,11 @@ namespace Lab91
                 var tempdb = unit.Libs.GetItems().OrderByDescending(t => t.Adress).ToList();
                 Libraries.ItemsSource = tempdb;
             }
+            using (StreamWriter sw = new StreamWriter("config.txt", true))
+            {
+                sw.WriteLine("Выполнена сортировка");
+            }
+
         }
 
         private void SortByBookID_Click(object sender, RoutedEventArgs e)
@@ -199,6 +234,11 @@ namespace Lab91
                 var tempdb = unit.Books.GetItems().OrderByDescending(t => t.Id).ToList();
                 Books.ItemsSource = tempdb;
             }
+            using (StreamWriter sw = new StreamWriter("config.txt", true))
+            {
+                sw.WriteLine("Выполнена сортировка");
+            }
+
         }
 
         private void SortByBookName_Click(object sender, RoutedEventArgs e)
@@ -208,6 +248,11 @@ namespace Lab91
                 var tempdb = unit.Books.GetItems().OrderByDescending(t => t.Name).ToList();
                 Books.ItemsSource = tempdb;
             }
+            using (StreamWriter sw = new StreamWriter("config.txt", true))
+            {
+                sw.WriteLine("Выполнена сортировка");
+            }
+
         }
 
         private void SortByAuthor_Click(object sender, RoutedEventArgs e)
@@ -217,6 +262,11 @@ namespace Lab91
                 var tempdb = unit.Books.GetItems().OrderByDescending(t => t.Author).ToList();
                 Books.ItemsSource = tempdb;
             }
+            using (StreamWriter sw = new StreamWriter("config.txt", true))
+            {
+                sw.WriteLine("Выполнена сортировка");
+            }
+
         }
 
         private void SortByLibIDInBook_Click(object sender, RoutedEventArgs e)
@@ -226,6 +276,11 @@ namespace Lab91
                 var tempdb = unit.Books.GetItems().OrderByDescending(t => t.LibraryID).ToList();
                 Books.ItemsSource = tempdb;
             }
+            using (StreamWriter sw = new StreamWriter("config.txt", true))
+            {
+                sw.WriteLine("Выполнена сортировка");
+            }
+
         }
 
         private void ToDef_Click(object sender, RoutedEventArgs e)
@@ -235,6 +290,11 @@ namespace Lab91
                 Books.ItemsSource = unit.Books.GetItems();
                 Libraries.ItemsSource = unit.Libs.GetItems();
             }
+            using (StreamWriter sw = new StreamWriter("config.txt", true))
+            {
+                sw.WriteLine("Выполнена сортировка");
+            }
+
         }
         string Result { get; set; }
 
@@ -342,6 +402,10 @@ namespace Lab91
             {
                 SearchLibId.Background = new SolidColorBrush(Colors.Red);
                 SearchBookName.Background = new SolidColorBrush(Colors.Red);
+            }
+            using (StreamWriter sw = new StreamWriter("config.txt", true))
+            {
+                sw.WriteLine("Выполнен поиск");
             }
         }
     }
