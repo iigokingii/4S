@@ -123,8 +123,8 @@ int main(int argc, _TCHAR* argv[])
 			counter--;
 		} while (counter > 0);
 		
-		if ((lobuf = sendto(cC, "", strlen("") + 1, NULL, (sockaddr*)&serv, sizeof(serv))) == SOCKET_ERROR)
-			throw  SetErrorMsgText("recv:", WSAGetLastError());
+		/*if ((lobuf = sendto(cC, "", strlen("") + 1, NULL, (sockaddr*)&serv, sizeof(serv))) == SOCKET_ERROR)
+			throw  SetErrorMsgText("recv:", WSAGetLastError());*/
 
 		if (closesocket(cC) == SOCKET_ERROR)
 			throw  SetErrorMsgText("closesocket:", WSAGetLastError());
