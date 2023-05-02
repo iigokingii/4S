@@ -88,8 +88,8 @@ int main(int argc, _TCHAR* argv[])
 	HANDLE hPipe;
 	try
 	{
-		//LPCWSTR ADRESS = L"\\\\.\\pipe\\Tube";
-		LPCWSTR ADRESS = L"\\\\semkinpc\\pipe\\Tube";
+		LPCWSTR ADRESS = L"\\\\.\\pipe\\Tube";
+		//LPCWSTR ADRESS = L"\\\\semkinpc\\pipe\\Tube";
 		if ((hPipe = CreateFile(
 			ADRESS,
 			GENERIC_READ | GENERIC_WRITE,
