@@ -1,0 +1,12 @@
+.inputCl{
+    background-color:#3F888F;
+}
+.inputCl::placeholder{
+    font-weight: bold;
+    opacity: 0.5;
+    color: black;
+}
+.Form{
+    border: 5px inset #77DDE7;
+    padding: 15px 100px 0px 10px;
+}

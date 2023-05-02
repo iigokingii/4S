@@ -1,12 +1,15 @@
 import React from 'react';
 import ProductCategoryRow from '../ProductCategoryRow/ProductCategoryRow.tsx';
 import ProductRow from '../ProductRow/ProductRow.tsx';
-const ProductTable = (props) => {
+import { IProduct, ProductTableType } from '../../types/types.js';
+import './ProductTable.css';
+
+const ProductTable = (props:ProductTableType) => {
     const products = props.products;
     let {state} = props;
     const rows : any = [];
     let lastCategory : string = '';
-    products.forEach((product) => {
+    products.forEach((product:IProduct) => {
         if (product.name.indexOf(state.filterText) === -1) {
             return;
         }
@@ -25,7 +28,7 @@ const ProductTable = (props) => {
     });
 
     return (
-        <table>
+        <table className='TabSt'>
             <thead>
             <tr>
                 <th>Name</th>

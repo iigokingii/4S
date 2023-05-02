@@ -1,11 +1,16 @@
 import React from 'react';
-const SearchBar = (props) => {
+import { StateType } from '../../types/types';
+import './SearchBar.css';
+type SearchBarType = {
+  state : StateType
+}
 
+const SearchBar = (props:SearchBarType) => {
     let {state} = props;
-
     return (
-        <form>
+        <form className="Form">
             <input
+                className="inputCl"
                 type="text"
                 placeholder="Search..."
                 value={state.filterText}

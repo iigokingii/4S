@@ -1,7 +1,6 @@
 import React from "react";
-type ProductCategoryRowType={
-    category:string
-}
+import { ProductCategoryRowType } from "../../types/types";
+
 const ProductCategoryRow = (props:ProductCategoryRowType)=>{
     const category = props.category;
     return (

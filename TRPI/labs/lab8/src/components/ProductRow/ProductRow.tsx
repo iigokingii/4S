@@ -1,5 +1,6 @@
 import React from "react";
-const ProductRow = (props) => {
+import { ProductRowType } from "../../types/types";
+const ProductRow = (props:ProductRowType) => {
   const {product} = props;
   const name = product.stocked ?
       product.name : <span style={{color: 'red'}}> {product.name} </span>

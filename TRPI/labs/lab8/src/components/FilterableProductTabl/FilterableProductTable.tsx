@@ -2,17 +2,19 @@ import React,{useState} from "react";
 import SearchBar from "../SearchBar/SearchBar.tsx";
 import ProductTable from "../ProductTable/ProductTable.tsx";
 import products from "../state/State.module.ts";
+import { StateType } from "../../types/types.js";
+
 const FilterableProductTable =()=>{
-  const [text,setText] = useState("");
+  const [text, setText] = useState("");
   const [checked, setChecked] = useState(true);
-  let state = {
+  let state:StateType = {
     filterText: text,
     inStockOnly: checked,
     onFilterTextChange: (text:string) => setText(text),
     onInStockChange: (status : boolean) => setChecked(status)
 }
   return(
-    <div>
+    <div style={{padding:"50px 100px 50px 50px",border:"12px groove black" }}>
       <SearchBar state={state} />
       <ProductTable products={products} state ={state}/>
     </div>
