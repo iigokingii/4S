@@ -27,6 +27,7 @@ using System.Data.Common;
 using Brushes = System.Drawing.Brushes;
 using System.ComponentModel;
 using System.Text.RegularExpressions;
+using System.Runtime.Remoting.Messaging;
 
 
 namespace lab8
@@ -125,7 +126,108 @@ namespace lab8
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (CheckValid() == 1)
+            {
+                int id;
+                using (SqlConnection con = new SqlConnection(sqlConnection.ConnectionString))
+                {
+                    con.Open();
+                    SqlTransaction transaction = con.BeginTransaction();
+                    SqlCommand command = con.CreateCommand();
+                    command.Transaction = transaction;
+                    try
+                    {
+                        command.CommandText = "SELECT MAX(FLAT_ID) FROM FLAT";
+                        int.TryParse(command.ExecuteScalar().ToString(),out id);
+                        id++;
+                        command.CommandText = "INSERT INTO ADRESS(ADRESS_ID,COUNTRY,CITY,DISTRINCT,STREET,HOUSE,NUMBER_OF_FLAT,BUILDING)" +
+                                                   "VALUES (@ID,@country,@city,@distr,@street,@house,@numbOfFla,@building)";
+                        
+                        command.Parameters.Add("@ID", SqlDbType.Int, sizeof(Int32));
+                        command.Parameters.Add("@country", SqlDbType.NVarChar, Convert.ToInt32(Country.Text.Length));
+                        command.Parameters.Add("@city", SqlDbType.NVarChar, Convert.ToInt32(City.Text.Length));
+                        command.Parameters.Add("@distr", SqlDbType.NVarChar, Convert.ToInt32(Distrinct.Text.Length));
+                        command.Parameters.Add("@street", SqlDbType.NVarChar, Convert.ToInt32(Street.Text.Length));
+                        command.Parameters.Add("@house", SqlDbType.NVarChar, Convert.ToInt32(House.Text.Length));
+                        command.Parameters.Add("@numbOfFla", SqlDbType.NVarChar, Convert.ToInt32(NumOfFl.Text.Length));
+                        command.Parameters.Add("@building", SqlDbType.NVarChar, Convert.ToInt32(Building.Text.Length));
+
+                        command.Parameters["@ID"].Value = id;
+                       
+                        command.Parameters["@country"].Value = Country.Text;
+                        command.Parameters["@city"].Value = City.Text;
+                        command.Parameters["@distr"].Value = Distrinct.Text;
+                        command.Parameters["@street"].Value = Street.Text;
+                        command.Parameters["@house"].Value = House.Text;
+                        command.Parameters["@numbOfFla"].Value = NumOfFl.Text;
+                        command.Parameters["@building"].Value = Building.Text;
+
+                        command.ExecuteNonQuery();
+
+                        command.CommandText = "INSERT INTO FLAT(FLAT_ID,SQUARE_FOOTAGE,NUMBER_OF_ROOMS,KITCHEN,BATH,TOILET,BALCONY,BASEMENT,YEAR_OF_CONSTRUCTION,TYPE_OF_MATERIAL,FLAT_IMAGE,FLOOR,ADRESS_ID)" +
+                                                   "VALUES (@ID,@square,@numberRom,@k,@b,@t,@balc,@basem,@constYear,@type,@IMG,@floor,@ID)";
+
+                        command.Parameters.Add("@square", SqlDbType.Real, sizeof(double));
+                        command.Parameters.Add("@numberRom", SqlDbType.Int, sizeof(int));
+                        command.Parameters.Add("@k", SqlDbType.NVarChar, Convert.ToInt32(kitch.Text.Length));
+                        command.Parameters.Add("@b", SqlDbType.NVarChar, Convert.ToInt32(bath.Text.Length));
+                        command.Parameters.Add("@t", SqlDbType.NVarChar, Convert.ToInt32(toil.Text.Length));
+                        command.Parameters.Add("@balc", SqlDbType.NVarChar, Convert.ToInt32(Balc.Text.Length));
+                        command.Parameters.Add("@basem", SqlDbType.NVarChar, Convert.ToInt32(Base.Text.Length));
+                        command.Parameters.Add("@constYear", SqlDbType.Date);
+                        command.Parameters.Add("@type", SqlDbType.NVarChar, Convert.ToInt32(type.Text.Length));
+                        byte[] imageData;
+                        if (photoPath != "")
+                        {
+                            using (FileStream fs = new FileStream(photoPath, FileMode.Open))
+                            {
+                                imageData = new byte[fs.Length];
+                                fs.Read(imageData, 0, imageData.Length);
+                                command.Parameters.Add("@IMG", SqlDbType.Image, Convert.ToInt32(fs.Length));
+                            }
+                        }
+                        else
+                        {
+
+                            photoPath = "D:\\2k2s\\OOT\\labs\\images\\4-5\\foouter\\qwe.jpg";
+                            using (FileStream fs = new FileStream(photoPath, FileMode.Open))
+                            {
+                                imageData = new byte[fs.Length];
+                                fs.Read(imageData, 0, imageData.Length);
+                                command.Parameters.Add("@IMG", SqlDbType.Image, Convert.ToInt32(fs.Length));
+                            }
+                            command.Parameters["@IMG"].Value = imageData;
+                        }
+
+                        command.Parameters.Add("@floor", SqlDbType.Int, sizeof(Int32));
+
+                        command.Parameters["@square"].Value = sl2.Value;
+                        command.Parameters["@numberRom"].Value = sl.Value;
+                        command.Parameters["@k"].Value = kitch.Text;
+                        command.Parameters["@b"].Value = bath.Text;
+                        command.Parameters["@t"].Value = toil.Text;
+                        command.Parameters["@balc"].Value = Balc.Text;
+                        command.Parameters["@basem"].Value = Base.Text;
+                        command.Parameters["@constYear"].Value = data.SelectedDate;
+                        command.Parameters["@type"].Value = type.Text;
+                        command.Parameters["@floor"].Value = int.Parse(Floor.Text);
+                        command.Parameters["@IMG"].Value = imageData;
+
+                        command.ExecuteNonQuery();
+
+                        transaction.Commit();
+                        UpdateDate();
+                        Result.Add("Commit");
+
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        Result.Add("Rollback");
+                        Result.Add(ex.Message);
+                    }
+                }
+            }
         }
 
         public BitmapImage image { get; set; }
@@ -364,14 +466,16 @@ namespace lab8
                                 bitmap.EndInit();
                                 test_Img.Source = bitmap;
                             }
-                            reader.Close();
+                            
                         }
+                        reader.Close();
                         transaction.Commit();
                         UpdateDate();
                         Result.Add("Commit");
                     }
                     catch (Exception ex)
                     {
+                      
                         transaction.Rollback();
                         Result.Add("Rollback");
                         Result.Add(ex.Message);
@@ -384,15 +488,6 @@ namespace lab8
             int id,floor;
             //string pattern = "([a-z])+|([а-я])+|([A-Z])+|([А-Я])+";
             string pattern = "^[a-zA-Zа-яА-Я ]*$";
-            if (!int.TryParse(ID.Text, out id))
-            {
-                ID.Background = new SolidColorBrush(Colors.Red);
-                return -1;
-            }
-            else
-            {
-                ID.Background = new SolidColorBrush(Colors.White);
-            }
             if (!Regex.IsMatch(kitch.Text, pattern))
             {
                 kitch.Background = new SolidColorBrush(Colors.Red);
@@ -548,7 +643,16 @@ namespace lab8
         {
             if (CheckValid() == 1)
             {
-                int id = int.Parse(ID.Text);
+                int id;
+                if (!int.TryParse(ID.Text, out id))
+                {
+                    ID.Background = new SolidColorBrush(Colors.Red);
+                    return ;
+                }
+                else
+                {
+                    ID.Background = new SolidColorBrush(Colors.White);
+                }
                 using (SqlConnection con = new SqlConnection(sqlConnection.ConnectionString))
                 {
                     con.Open();

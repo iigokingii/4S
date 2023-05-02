@@ -36,12 +36,10 @@ namespace lab8
         SqlConnectionStringBuilder sqlConnection;
         ObservableCollection<String> Result;
         SqlConnection connection;
-        StreamWriter fs;
         public MainWindow()
         {
 
             InitializeComponent();
-            fs = new StreamWriter("App.config",false);
             Result = new ObservableCollection<string>();
             /*TestRes.ItemsSource = Result;*/
             SqlConnectionStringBuilder connectionStringBuilder = new SqlConnectionStringBuilder();
@@ -56,8 +54,12 @@ namespace lab8
             try
             {
                 connection.Open();
-                fs.WriteLine("connection string:" + connectionStringBuilder.ConnectionString);
-                fs.WriteLine("Connection opened");
+                using (StreamWriter fs = new StreamWriter("App.config",false))
+                {
+                    fs.WriteLine("connection string:" + connectionStringBuilder.ConnectionString);
+                    fs.WriteLine("Connection opened");
+                }
+                    
             }
             catch (SqlException SE)
             {
@@ -72,6 +74,10 @@ namespace lab8
                     if (err.Number == 4060)
                     {
                         CreateDB();
+                        using (StreamWriter fs = new StreamWriter("App.config", true))
+                        {
+                            fs.WriteLine("Creating Database");
+                        }
                     }
                 }
             }
@@ -109,7 +115,10 @@ namespace lab8
         {
             AddItem add = new AddItem();
             add.Show();
-            fs.WriteLine("Add item menu opened");
+            using (StreamWriter fs = new StreamWriter("App.config", true))
+            {
+                fs.WriteLine("Add item menu opened");
+            }
         }
         public BitmapImage image { get; set; }
         public Bitmap ing { get; set; }
@@ -152,16 +161,20 @@ namespace lab8
             MessageBox.Show("Connection closed", "Exit", MessageBoxButton.OK);
             connection.Close();
             this.Close();
-            fs.WriteLine("Connection closed");
-            fs.Close();
-
+            using (StreamWriter fs = new StreamWriter("App.config", true))
+            {
+                fs.WriteLine("Connection closed");
+            }
         }
 
         private void Sort_Click(object sender, RoutedEventArgs e)
         {
             Sorting sorting = new Sorting();
             sorting.Show();
-            fs.WriteLine("Sort window opened");
+            using (StreamWriter fs = new StreamWriter("App.config", true))
+            {
+                fs.WriteLine("Sort window opened");
+            }
         }
     }
 }
