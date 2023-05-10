@@ -19,12 +19,6 @@ namespace SampleMVVM
     {
         private void OnStartup(object sender, StartupEventArgs e)
         {
-            /* List<Book> books = new List<Book>()
-             {
-                 new Book("Пттерны проетирования", "John Gossman", 3),
-                 new Book("CLR via C#", "Джеффри Рихтер", 2),
-                 new Book("Исскуство программирования", "Кнут", 2)
-             };*/
             SqlConnectionStringBuilder connectionStringBuilder = new SqlConnectionStringBuilder();
             connectionStringBuilder.DataSource = "GOKING";
             connectionStringBuilder.InitialCatalog = "lab11OOT";
@@ -74,8 +68,8 @@ namespace SampleMVVM
             }
 
             MainView view = new MainView(); // создали View
-            MainViewModel viewModel = new ViewModels.MainViewModel(medCenter.ToList()); // Создали ViewModel
-            view.DataContext = viewModel; // положили ViewModel во View в качестве DataContext
+            MainViewModel viewModel = new MainViewModel(medCenter.ToList()); // Создали ViewModel
+           view.DataContext = viewModel; // положили ViewModel во View в качестве DataContext
             view.Show();
         }
     }

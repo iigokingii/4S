@@ -63,35 +63,7 @@ namespace SampleMVVM.ViewModels
                 OnPropertyChanged("Count");
             }
         }
-        /*public string Title
-        {
-            get { return Book.Title; }
-            set 
-            {
-                Book.Title = value;
-                OnPropertyChanged("Title");
-            }
-        }
-
-        public string Author
-        {
-            get { return Book.Author; }
-            set
-            {
-                Book.Author = value;
-                OnPropertyChanged("Author");
-            }
-        }
-
-        public int Count
-        {
-            get { return Book.Count; }
-            set
-            {
-                Book.Count = value;
-                OnPropertyChanged("Count");
-            }
-        }*/
+        
         #region Commands
 
         #region Забрать
