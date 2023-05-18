@@ -69,7 +69,7 @@ namespace SampleMVVM
 
             MainView view = new MainView(); // создали View
             MainViewModel viewModel = new MainViewModel(medCenter.ToList()); // Создали ViewModel
-           view.DataContext = viewModel; // положили ViewModel во View в качестве DataContext
+            view.DataContext = viewModel; // положили ViewModel во View в качестве DataContext
             view.Show();
         }
     }
