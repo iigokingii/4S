@@ -1,0 +1,56 @@
+@media (min-width: 1281px) {
+    .head{
+        display: flex;
+        height: 74px;
+        background-color: #FFFFFF;
+        margin-bottom: 24px;
+    }
+    .mainContent{
+        margin: 0 9% 0 10%;
+        display: flex;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 50%;
+        justify-content: space-between;
+    }
+    .vacancy_filter{
+        font-family: 'Montserrat';
+        background-color: transparent;
+        border: 0px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .vacancy_filter:hover{
+        cursor: pointer;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .head{
+        display: flex;
+        height: 74px;
+        background-color: #FFFFFF;
+        margin-bottom: 24px;
+    }
+    .mainContent{
+        margin: 0 9% 0 10%;
+        display: flex;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .vacancy_filter{
+        font-family: 'Montserrat';
+        background-color: transparent;
+        border: 0px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .vacancy_filter:hover{
+        cursor: pointer;
+    }
+}

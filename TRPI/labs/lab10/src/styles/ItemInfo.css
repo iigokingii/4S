@@ -1,0 +1,78 @@
+@media (min-width: 1281px) {
+    .wrapper{
+        background-color: #FFFFFF;
+        width: 55%;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.03);
+        border-radius: 10px;
+    }
+    .img{
+        width: 130px;
+        height: 84px;
+        margin-right: 51px;
+        padding: 0;
+    }
+    .HeadWrapper{
+        margin:23px 28px 0 30px;
+        display: flex;
+    }
+    .TittleWrapper{
+        padding-top: 23px;
+    }
+    .TittleStyle{
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: #000000;
+    }
+    .InfoStyle{
+    margin: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+
+    color: #9AAAB5;
+
+    }
+    .salaryStyle{
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+
+    }
+    .contentWrapper{
+        margin:23px 28px 0 30px;
+    }
+    .strongStyle{
+
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: left;
+    }
+    .normalStyle{
+        
+        font-family: 'Montserrat';
+        text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    }
+}

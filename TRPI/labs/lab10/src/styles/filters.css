@@ -1,0 +1,122 @@
+@media (min-width: 1281px) {
+    .headersSt{
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    .filtersWrapper{
+        background-color: #FFFFFF;
+        margin: 0 9% 60px 10%;
+        display: flex;
+        height: 67px;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.03);
+        border-radius: 10px;
+    
+    }
+    .filterStyle{
+        width: 230px;
+        border-right: 2px solid #F9F9F9;
+
+    }
+    .imgSt{
+        width: 20px;
+        height: 20px;
+    }
+    .titleStyle{
+        font-family: 'Montserrat';
+        display: inline;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        color: #49627E;
+        height: 100%;
+        margin-left: 20px;
+        position: relative;
+        top:-5px;
+    }
+    .OptionsStyle{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 6px;
+        line-height: 15px;
+        /* identical to box height */
+        color: #49627E;
+        background-color: #FFFFFF;
+        width: 230px;
+        margin-top: -6px;
+
+    }
+    .qwe{
+        display: flex;
+        padding-left: 30px;
+    }
+    .search_btn{
+        background: #0070FB;
+        border-radius: 0px 10px 10px 0px;
+        width: 64px;
+    }
+    .search_btn:hover{
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .headersSt{
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    .filtersWrapper{
+        background-color: #FFFFFF;
+        margin: 0 9% 60px 10%;
+        display: flex;
+        height: 67px;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.03);
+        border-radius: 10px;
+    }
+    .filterStyle{
+        width: 230px;
+        border-right: 2px solid #F9F9F9;
+
+    }
+    .imgSt{
+        width: 20px;
+        height: 20px;
+    }
+    .titleStyle{
+        font-family: 'Montserrat';
+        display: inline;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        color: #49627E;
+        height: 100%;
+        margin-left: 20px;
+        position: relative;
+        top:-5px;
+    }
+    .OptionsStyle{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 6px;
+        line-height: 15px;
+        /* identical to box height */
+        color: #49627E;
+        background-color: #FFFFFF;
+        width: 230px;
+        margin-top: -6px;
+
+    }
+    .qwe{
+        display: flex;
+        padding-left: 30px;
+    }
+    .search_btn{
+        background: #0070FB;
+        border-radius: 0px 10px 10px 0px;
+        width: 64px;
+    }
+}
